@@ -27,6 +27,36 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <table className="Table">
+          <tr>
+            <th>Name</th>
+            <th>Birth Year</th>
+            <th>Created</th>
+            <th>Edited</th>
+            <th>Eye Color</th>
+            <th>Gender</th>
+            <th>Hair Color</th>
+            <th>Height</th>
+            <th>Mass</th>
+            <th>Skin Color</th>
+          </tr>
+            {this.state.starwarsChars.map((char) => {
+              return (
+                <tr>
+                  <td>{char.name}</td>
+                  <td>{char.birth_year}</td>
+                  <td>{char.created}</td>
+                  <td>{char.edited}</td>
+                  <td>{char.eye_color}</td>
+                  <td>{char.gender}</td>
+                  <td>{char.hair_color}</td>
+                  <td>{char.height}</td>
+                  <td>{char.mass}</td>
+                  <td>{char.skin_color}</td>
+                </tr>
+              )
+            })}
+        </table>
       </div>
     );
   }
